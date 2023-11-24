@@ -24,7 +24,7 @@ export class CreateUser {
 
         } catch (error) {
             console.log(error)
-            return res.status(500).json({ mensagem: "Erro interno do servidor" })
+            return res.status(500).json({ mensagem: "Erro interno do servidor!" })
         }
     }
 

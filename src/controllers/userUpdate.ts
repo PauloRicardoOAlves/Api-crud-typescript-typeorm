@@ -22,16 +22,16 @@ export class UserUpdate {
     
                 await userRepository.save(user)
 
-                return res.status(204).json()
+                return res.status(200).json({mensagem: "Usuario atualizado com sucesso!"})
             }
 
 
-            return res.status(404).json({mensagem: "O usuário informado não foi encontrado"})
+            return res.status(404).json({mensagem: "O usuário informado não foi encontrado!"})
 
 
         } catch (error) {
             console.log(error)
-            return res.status(500).json({ mensagem: "Erro interno do servidor" })
+            return res.status(500).json({ mensagem: "Erro interno do servidor!" })
         }
     }
 }
